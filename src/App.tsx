@@ -5,6 +5,7 @@ import Slider from './Slider';
 const Page:FC = () => {
   return (
     <>
+      {/* メイン */}
       <div className='mx-auto mt-20 relative'>
         <img className="w-full object-cover" src="./src/assets/home.jpg"></img>
         <div className="absolute text-center" style={{top: "42%", left: "52%", transform: "translate(-50%, -50%)"}}>
@@ -17,8 +18,9 @@ const Page:FC = () => {
         </div>
       </div>
 
+      {/* 自己紹介 */}
       <div className='bg-[var(--body-color)]'>
-        <div className='h-350 max-w-360 mx-auto text-center'>
+        <div className='h-auto max-w-360 mx-auto text-center'>
           <h1 className='text-[64px] pt-76'>About me</h1>
           <div className='flex items-center justify-center'>
             <div className='h-50 w-50 rounded-full bg-amber-500'></div>
@@ -26,7 +28,8 @@ const Page:FC = () => {
               大阪公立大学大学院情報学研究科基幹情報学専攻の石丸です．Webアプリをチームで開発したり個人でも開発しています
             </p>
           </div>
-          <div className='flex justify-center gap-18 mt-10'>
+          <div className='flex justify-center flex-wrap gap-18 mt-10'>
+            {/* 音楽 */}
             <div className='flex flex-col items-start'>
               <h1 className='text-[40px]'>
                 Music
@@ -39,21 +42,27 @@ const Page:FC = () => {
                 セカオワが好きで毎回ライブに参戦しています
               </p>
             </div>
+            {/* 食べ物 */}
             <div className='flex flex-col items-start'>
               <h1 className='text-[40px]'>
                 Foods
               </h1>
-              <div className='h-66 w-70 bg-[#D4C9BE]'></div>
+              <div className='h-66 w-70'>
+                <Slider />
+              </div>
               <div className='h-16 w-70 bg-[#D9D9D9] text-[24px] flex flex-col justify-center items-center'>ラーメン</div>
               <p className='w-70 text-[24px] inline-block text-left'>
                 ラーメンが好きでよく食べに行きます
               </p>
             </div>
+            {/* スポーツ */}
             <div className='flex flex-col items-start'>
               <h1 className='text-[40px]'>
                 Sports
               </h1>
-              <div className='h-66 w-70 bg-[#D4C9BE]'></div>
+              <div className='h-66 w-70'>
+                <Slider />
+              </div>
               <div className='h-16 w-70 bg-[#D9D9D9] text-[24px] flex flex-col justify-center items-center'>ラーメン</div>
               <p className='w-70 text-[24px] inline-block text-left'>
                 ラーメンが好きでよく食べに行きます
@@ -62,35 +71,70 @@ const Page:FC = () => {
           </div>
         </div>
       </div>
-      <div className='h-345 max-w-360 mx-auto'>
+
+      {/* 活動紹介 */}
+      {/* h-345 */}
+      <div className='h-auto max-w-360 mx-auto'>
         <h1 className='text-center pt-59 text-[64px]'>Works</h1>
-        <div className='flex flex-col items-center'>
-          <div className='h-56 w-100 bg-[#D4C9BE]'></div>
-          <div className='h-34 w-100 text-center bg-[#D9D9D9]'>
-            <h2 className='text-[24px]'>ポートフォリオサイト</h2>
-            <p className='pt-6 text-[20px]'>自分のサイトを作りました</p>
+        <div className='flex flex-wrap justify-center gap-14'>
+          <div className='flex flex-col items-center'>
+            <div className='h-56 w-100 bg-[#D4C9BE]'></div>
+            <div className='h-34 w-100 text-center bg-[#D9D9D9]'>
+              <h2 className='text-[24px]'>ポートフォリオサイト</h2>
+              <p className='pt-6 text-[20px]'>自分のサイトを作りました</p>
+            </div>
           </div>
-        </div>
-        <div className='flex flex-col items-center pt-7'>
-          <div className='h-56 w-100 bg-[#D4C9BE]'></div>
-          <div className='h-34 w-100 text-center bg-[#D9D9D9]'>
-            <h2 className='text-[24px]'>研究会</h2>
-            <p className='pt-6 text-[20px]'>研究会に参加しました</p>
+          <div className='flex flex-col items-center'>
+            <div className='h-56 w-100 bg-[#D4C9BE]'></div>
+            <div className='h-34 w-100 text-center bg-[#D9D9D9]'>
+              <h2 className='text-[24px]'>研究会</h2>
+              <p className='pt-6 text-[20px]'>研究会に参加しました</p>
+            </div>
+          </div>
+          <div className='flex flex-col items-center'>
+            <div className='h-56 w-100 bg-[#D4C9BE]'></div>
+            <div className='h-34 w-100 text-center bg-[#D9D9D9]'>
+              <h2 className='text-[24px]'>研究会</h2>
+              <p className='pt-6 text-[20px]'>研究会に参加しました</p>
+            </div>
+          </div>
+          <div className='flex flex-col items-center'>
+            <div className='h-56 w-100 bg-[#D4C9BE]'></div>
+            <div className='h-34 w-100 text-center bg-[#D9D9D9]'>
+              <h2 className='text-[24px]'>研究会</h2>
+              <p className='pt-6 text-[20px]'>研究会に参加しました</p>
+            </div>
+          </div>
+          <div className='flex flex-col items-center'>
+            <div className='h-56 w-100 bg-[#D4C9BE]'></div>
+            <div className='h-34 w-100 text-center bg-[#D9D9D9]'>
+              <h2 className='text-[24px]'>研究会</h2>
+              <p className='pt-6 text-[20px]'>研究会に参加しました</p>
+            </div>
           </div>
         </div>
       </div>
+
+      {/* スキル紹介 */}
       <div className='bg-[var(--body-color)]'>
-        <div className='h-416 max-w-360 mx-auto'>
-          <h1 className='text-[64px] text-center pt-72'>Skills</h1>
-          <div className='flex flex-col pl-86'>
-            <h2 className='text-[36px]'>FrontEnd</h2>
-            <div className='flex gap-7.5'>
-              <ul className='h-25 w-25 bg-[#D4C9BE]'></ul>
-              <ul className='h-25 w-25 bg-[#D4C9BE]'></ul>
-              <ul className='h-25 w-25 bg-[#D4C9BE]'></ul>
-              <ul className='h-25 w-25 bg-[#D4C9BE]'></ul>
-              <ul className='h-25 w-25 bg-[#D4C9BE]'></ul>
-              <ul className='h-25 w-25 bg-[#D4C9BE]'></ul>
+        {/* h-416 */}
+        <div className='h-auto max-w-360 mx-auto'>
+          <h1 className='text-[64px] text-center pt-72'>
+            Skills
+          </h1>
+          <div className='flex flex-col mx-70'>
+            <h2 className='text-[36px] text-start'>
+              FrontEnd
+            </h2>
+            <div className='flex flex-wrap gap-7.5'>
+              <img className='h-20 w-20' src='/icons/HTML.svg' alt='1' />
+              <img className='h-20 w-20' src='/icons/CSS.svg' alt='1' />
+              <img className='h-20 w-20' src='/icons/JavaScript.svg' alt='1' />
+              <img className='h-20 w-20' src='/icons/TypeScript.svg' alt='1' />
+              <img className='h-20 w-20' src='/icons/React.svg' alt='1' />
+              <img className='h-20 w-20' src='/icons/VueJS.svg' alt='1' />
+              <img className='h-20 w-20' src='/icons/Vite.svg' alt='1' />
+              <img className='h-20 w-20' src='/icons/TailwindCSS.svg' alt='1' />
             </div>
             <div className='text-[32px] pt-7.5'>
               <li>HTML：Webアプリ開発</li>
@@ -98,15 +142,17 @@ const Page:FC = () => {
               <li>JavaScript：Webアプリ開発</li>
             </div>
           </div>
-          <div className='flex flex-col pl-86 pt-5'>
+          <div className='flex flex-col mx-70 pt-5'>
             <h2 className='text-[36px]'>BackEnd</h2>
-            <div className='flex gap-7.5'>
-              <ul className='h-25 w-25 bg-[#D4C9BE]'></ul>
-              <ul className='h-25 w-25 bg-[#D4C9BE]'></ul>
-              <ul className='h-25 w-25 bg-[#D4C9BE]'></ul>
-              <ul className='h-25 w-25 bg-[#D4C9BE]'></ul>
-              <ul className='h-25 w-25 bg-[#D4C9BE]'></ul>
-              <ul className='h-25 w-25 bg-[#D4C9BE]'></ul>
+            <div className='flex flex-wrap gap-7.5'>
+              <img className='h-20 w-20' src='/icons/Java.svg' alt='1' />
+              <img className='h-20 w-20' src='/icons/Python.svg' alt='1' />
+              <img className='h-20 w-20' src='/icons/C.svg' alt='1' />
+              <img className='h-20 w-20' src='/icons/CPP.svg' alt='1' />
+              <img className='h-20 w-20' src='/icons/Django.svg' alt='1' />
+              <img className='h-20 w-20' src='/icons/Spring.svg' alt='1' />
+              <img className='h-20 w-20' src='/icons/Gradle.svg' alt='1' />
+              <img className='h-20 w-20' src='/icons/Mariadb.svg' alt='1' />
             </div>
             <div className='text-[32px] pt-7.5'>
               <li>Python：Webアプリ開発</li>
@@ -114,15 +160,16 @@ const Page:FC = () => {
               <li>MySQL：Webアプリ開発</li>
             </div>
           </div>
-          <div className='flex flex-col pl-86 pt-5'>
+          <div className='flex flex-col mx-70 pt-5'>
             <h2 className='text-[36px]'>Tools</h2>
-            <div className='flex gap-7.5'>
-              <ul className='h-25 w-25 bg-[#D4C9BE]'></ul>
-              <ul className='h-25 w-25 bg-[#D4C9BE]'></ul>
-              <ul className='h-25 w-25 bg-[#D4C9BE]'></ul>
-              <ul className='h-25 w-25 bg-[#D4C9BE]'></ul>
-              <ul className='h-25 w-25 bg-[#D4C9BE]'></ul>
-              <ul className='h-25 w-25 bg-[#D4C9BE]'></ul>
+            <div className='flex flex-wrap gap-7.5'>
+              <img className='h-20 w-20' src='/icons/VSCode.svg' alt='1' />
+              <img className='h-20 w-20' src='/icons/Github.svg' alt='1' />
+              <img className='h-20 w-20' src='/icons/Docker.svg' alt='1' />
+              <img className='h-20 w-20' src='/icons/Figma.svg' alt='1' />
+              <img className='h-20 w-20' src='/icons/Linux.svg' alt='1' />
+              <img className='h-20 w-20' src='/icons/Eclipse.svg' alt='1' />
+              <img className='h-20 w-20' src='/icons/Vercel.svg' alt='1' />
             </div>
             <div className='text-[32px] pt-7.5'>
               <li>Docker：Webアプリ開発</li>
@@ -132,9 +179,11 @@ const Page:FC = () => {
           </div>
         </div>
       </div>
+
+      {/* 問い合わせ */}
       <div className='h-321 flex flex-col items-center'>
         <h1 className='text-[64px] text-center pt-75'>Contact me</h1>
-        <div className='h-180 w-178 pt-18 border-[3px] gap-8 border-[#D4C9BE] flex flex-col items-center'>
+        <div className='h-190 w-178 pt-18 border-[3px] gap-8 border-[#D4C9BE] flex flex-col items-center'>
           <div className='flex gap-16'>
             <div className='flex flex-col'>
               <h2 className='text-[32px]'>お名前</h2>
@@ -153,6 +202,7 @@ const Page:FC = () => {
             <h2 className='text-[32px]'>本文</h2>
             <div className='h-50 w-156 border-[3px] border-[#D4C9BE]'></div>
           </div>
+          <button className='h-20 w-57 border-[3px] text-[30px] border-[#D4C9BE]'>送信する</button>
         </div>
       </div>
     </>
