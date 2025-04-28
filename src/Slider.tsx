@@ -18,10 +18,10 @@ const Slider: FC = () => {
     return (
         <Swiper
             autoplay={{
-            delay: 0,
+            delay: 1000,
             }}
             spaceBetween={0}
-            speed={10000}
+            speed={3000}
             centeredSlides={true}
             slidesPerView={1}
             modules={[Autoplay]}
