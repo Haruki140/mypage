@@ -8,11 +8,11 @@ const Page:FC = () => {
       {/* メイン */}
       <div className='mx-auto mt-20 relative'>
         <img className="w-full object-cover" src="./src/assets/home.jpg"></img>
-        <div className="absolute text-center" style={{top: "42%", left: "52%", transform: "translate(-50%, -50%)"}}>
-          <h1 className='text-[68px] font-semibold text-stroke-name'>
+        <div className="absolute w-full text-center" style={{top: "42%", left: "52%", transform: "translate(-50%, -50%)"}}>
+          <h1 className='2xl:text-7xl sm:text-6xl tiny:text-5xl text-3xl font-semibold sm:text-stroke-name tiny:text-stroke-name-tablet text-stroke-name-mobile'>
             Haruki Ishimaru
           </h1>
-          <h1 className='text-[40px] font-semibold text-stroke-sub'>
+          <h1 className='2xl:text-5xl sm:text-4xl tiny:text-3xl text-xl font-semibold sm:text-stroke-sub tiny:text-stroke-sub-tablet text-stroke-sub-mobile'>
             Software Engineer
           </h1>
         </div>
@@ -22,13 +22,15 @@ const Page:FC = () => {
       <div className='bg-[var(--body-color)]'>
         <div className='h-auto max-w-360 mx-auto text-center'>
           <h1 className='text-[64px] pt-76'>About me</h1>
-          <div className='flex items-center justify-center'>
-            <div className='h-50 w-50 rounded-full bg-amber-500'></div>
-            <p className='w-161 text-[32px] pl-16'>
-              大阪公立大学大学院情報学研究科基幹情報学専攻の石丸です．Webアプリをチームで開発したり個人でも開発しています
+          <div className='flex items-center flex-wrap justify-center gap-10 mx-10'>
+            <div className='lg:h-50 md:h-40 h-35 lg:w-50 md:w-40 w-35 rounded-full bg-amber-500'></div>
+            <p className='lg:w-175 md:w-120 w-115 lg:text-3xl md:text-2xl text-xl lg:pl-15 inline-block text-left'>
+              大阪公立大学大学院 情報学研究科 基幹情報学専攻の石丸です．
+              IoT機器の種別について研究しています．
+              Webアプリをチームで開発したり個人でも開発しています
             </p>
           </div>
-          <div className='flex justify-center flex-wrap gap-18 mt-10'>
+          <div className='flex justify-center flex-wrap sm:gap-18 gap-10 mt-10'>
             {/* 音楽 */}
             <div className='flex flex-col items-start'>
               <h1 className='text-[40px]'>

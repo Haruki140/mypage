@@ -11,6 +11,30 @@
     -webkit-text-stroke-color: #D4C9BE;
 }
 
+@utility text-stroke-name-tablet {
+    -webkit-text-stroke-width: 1.2px;
+    -webkit-text-stroke-color: #D4C9BE;
+}
+
+@utility text-stroke-sub-tablet {
+    -webkit-text-stroke-width: 0.8px;
+    -webkit-text-stroke-color: #D4C9BE;
+}
+
+@utility text-stroke-name-mobile {
+    -webkit-text-stroke-width: 0.8px;
+    -webkit-text-stroke-color: #D4C9BE;
+}
+
+@utility text-stroke-sub-mobile {
+    -webkit-text-stroke-width: 0.6px;
+    -webkit-text-stroke-color: #D4C9BE;
+}
+
+@theme {
+   --breakpoint-tiny: 380px;
+}
+
 :root {
   --header-color: #D4C9BE;
   --body-color: #EEEBE4;
@@ -23,7 +47,7 @@
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-  /* font-family: "Hiragino Sans" */
+  font-family: "Hiragino Sans"
 }
 
 h1,
