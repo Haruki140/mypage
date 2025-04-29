@@ -8,7 +8,7 @@ const Header: FC = () => {
         <div className="bg-[var(--header-color)] fixed top-0 left-0 right-0 z-50">
             <div className="max-w-360 h-20 mx-auto">
                 <div className="flex items-center justify-between h-full">
-                    <h1 className="lg:text-[48px] text-[40px] gap-75 lg:pl-14 pl-8">Portfolio</h1>
+                    <h1 className="lg:text-5xl tiny:text-[40px] text-4xl gap-75 lg:pl-14 tiny:pl-8 pl-3">Portfolio</h1>
                     <div className="hidden sm:flex sm:justify-end lg:text-[32px] md:text-[28px] sm:text-[24px] xl:gap-16 lg:gap-10 md:gap-6 gap-4 lg:pr-10 pr-4">
                         <nav>Home</nav>
                         <nav>About</nav>
@@ -16,7 +16,7 @@ const Header: FC = () => {
                         <nav>Skills</nav>
                         <nav>Form</nav>
                     </div>
-                    <div className="sm:hidden pr-10">
+                    <div className="sm:hidden tiny:pr-10 pr-3">
                         <button 
                             type="button"
                             className="flex flex-col justify-center items-center"
