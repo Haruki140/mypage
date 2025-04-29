@@ -18,10 +18,10 @@ const Slider: FC = () => {
     return (
         <Swiper
             autoplay={{
-            delay: 1000,
+            delay: 2500,
             }}
-            spaceBetween={0}
-            speed={3000}
+            spaceBetween={10}
+            speed={1000}
             centeredSlides={true}
             slidesPerView={1}
             modules={[Autoplay]}
@@ -30,7 +30,7 @@ const Slider: FC = () => {
             {photoData.map(photo => {
                 return (
                     <SwiperSlide>
-                        <img className="h-66 w-70 object-cover" src={photo.uri} alt={photo.uri} />
+                        <img className="h-70 w-70 rounded-xl object-cover" src={photo.uri} alt={photo.uri} />
                     </SwiperSlide>
                 )
             })
