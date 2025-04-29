@@ -33,6 +33,7 @@
 
 @theme {
    --breakpoint-tiny: 380px;
+   --breakpoint-form: 560px;
 }
 
 :root {
