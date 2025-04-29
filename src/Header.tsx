@@ -1,8 +1,71 @@
-import React, {useState, FC} from "react";
+import React, {useState, useEffect, FC} from "react";
 import './style.css'
+
+type Elements = {
+    homeElement: HTMLElement | null,
+    aboutElement: HTMLElement | null,
+    workElement: HTMLElement | null,
+    skillElement: HTMLElement | null,
+    contactElement: HTMLElement | null,
+}
+
 
 const Header: FC = () => {
     const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
+    const [elements, setElements] = useState<Elements>({
+        homeElement: null,
+        aboutElement: null,
+        workElement: null,
+        skillElement: null,
+        contactElement: null,
+    });
+
+    const menu = [
+        {
+            title: "Home",
+            idx: elements.homeElement,
+        },
+        {
+            title: "About",
+            idx: elements.aboutElement,
+        },
+        {
+            title: "Works",
+            idx: elements.workElement,
+        },
+        {
+            title: "Skills",
+            idx: elements.skillElement,
+        },
+        {
+            title: "Contact",
+            idx: elements.contactElement,
+        }
+    ];
+
+    useEffect(() => {
+        const home = document.getElementById("home");
+        const about = document.getElementById("about");
+        const work = document.getElementById("work");
+        const skill = document.getElementById("skill");
+        const contact = document.getElementById("contact");
+
+        setElements({
+            homeElement: home,
+            aboutElement: about,
+            workElement: work,
+            skillElement: skill,
+            contactElement: contact,
+        })
+    }, [])
+
+    const handleNav = (element: HTMLElement | null) => {
+        if (element) {
+            element.scrollIntoView({
+                behavior: "smooth",
+            })
+        }
+    }
 
     return (
         <div className="bg-[var(--header-color)] fixed top-0 left-0 right-0 z-50">
@@ -10,11 +73,13 @@ const Header: FC = () => {
                 <div className="flex items-center justify-between h-full">
                     <h1 className="lg:text-5xl tiny:text-[40px] text-4xl gap-75 lg:pl-14 tiny:pl-8 pl-3">Portfolio</h1>
                     <div className="hidden sm:flex sm:justify-end lg:text-[32px] md:text-[28px] sm:text-[24px] xl:gap-16 lg:gap-10 md:gap-6 gap-4 lg:pr-10 pr-4">
-                        <nav>Home</nav>
-                        <nav>About</nav>
-                        <nav>Works</nav>
-                        <nav>Skills</nav>
-                        <nav>Form</nav>
+                        {menu.map(m => {
+                            return (
+                                <nav className="hover:cursor-pointer hover:text-[var(--hover-text-color)] transition duration-300" onClick={() => handleNav(m.idx)}>
+                                    {m.title}
+                                </nav>
+                            )
+                        })}
                     </div>
                     <div className="sm:hidden tiny:pr-10 pr-3">
                         <button 
