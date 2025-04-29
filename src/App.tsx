@@ -4,22 +4,22 @@ import Slider from './Slider';
 // abstは30文字前後
 const workData = [
   {
-    photo: "test",
+    photo: "/src/assets/home.jpg",
     title: "ポートフォリオサイト",
     abst: "自分のサイトを作りました",
   },
   {
-    photo: "test",
+    photo: "/src/assets/home.jpg",
     title: "ラーメン記録",
     abst: "ラーメンを記録するアプリを作りましたラーメンを記録するアプリを作りました",
   },
   {
-    photo: "test",
+    photo: "/src/assets/home.jpg",
     title: "ポートフォリオサイト",
     abst: "自分のサイトを作りました",
   },
   {
-    photo: "test",
+    photo: "/src/assets/home.jpg",
     title: "ポートフォリオサイト",
     abst: "自分のサイトを作りました",
   },
@@ -77,7 +77,7 @@ const Page:FC = () => {
               <h1 className='text-[40px]'>
                 Music
               </h1>
-              <div className='h-70 w-70 rounded-4xl'>
+              <div className='h-70 w-70 rounded-4xl shadow-2xl'>
                 <Slider />
               </div>
               {/* <div className='h-16 w-70 bg-[#D9D9D9] text-[24px] flex flex-col justify-center'>ラーメン</div> */}
@@ -90,7 +90,7 @@ const Page:FC = () => {
               <h1 className='text-[40px]'>
                 Foods
               </h1>
-              <div className='h-70 w-70'>
+              <div className='h-70 w-70 rounded-4xl shadow-2xl'>
                 <Slider />
               </div>
               {/* <div className='h-16 w-70 bg-[#D9D9D9] text-[24px] flex flex-col justify-center items-center'>ラーメン</div> */}
@@ -103,7 +103,7 @@ const Page:FC = () => {
               <h1 className='text-[40px]'>
                 Sports
               </h1>
-              <div className='h-70 w-70'>
+              <div className='h-70 w-70 rounded-4xl shadow-2xl'>
                 <Slider />
               </div>
               {/* <div className='h-16 w-70 bg-[#D9D9D9] text-[24px] flex flex-col justify-center items-center'>ラーメン</div> */}
@@ -124,10 +124,13 @@ const Page:FC = () => {
         <div className='grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5 px-5 sm:mt-15 mt-5'>
           {workData.map(work => {
             return (
-              <div className='flex flex-col items-center'>
-                <div className='sm:h-56 h-50 w-full bg-[#D4C9BE] rounded-t-2xl'></div>
-                <div className='lg:h-40 sm:h-40 h-34 w-full text-center px-5 bg-[#D9D9D9] rounded-b-2xl'>
-                  <h2 className='tiny:text-2xl text-xl font-semibold pt-2 inline-block text-left'>{work.title}</h2>
+              <div className='flex flex-col items-center rounded-2xl shadow-xl hover:translate-y-[-7px] hover:cursor-pointer transition duration-400'>
+                <img src={work.photo} className='sm:h-56 h-50 w-full object-cover rounded-t-xl' />
+                <div className='flex flex-col items-center lg:h-40 sm:h-40 h-34 w-full text-center px-5 rounded-b-xl border-[#cdaf92] border-2'>
+                  <h2 className='tiny:text-2xl text-xl font-semibold py-1.5 inline-block text-left relative'>
+                    {work.title}
+                    <span className='absolute bg-[#cdaf92c6] w-70 h-[2px] bottom-0 left-1/2 transform -translate-x-1/2 rounded-3xl' />
+                  </h2>
                   <p className='pt-4 tiny:text-[20px] font-light text-sm pb-2 inline-block text-left'>{work.abst}</p>
                 </div>
               </div>

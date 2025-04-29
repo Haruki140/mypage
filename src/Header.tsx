@@ -75,7 +75,7 @@ const Header: FC = () => {
                     <div className="hidden sm:flex sm:justify-end lg:text-[32px] md:text-[28px] sm:text-[24px] xl:gap-16 lg:gap-10 md:gap-6 gap-4 lg:pr-10 pr-4">
                         {menu.map(m => {
                             return (
-                                <nav className="hover:cursor-pointer hover:text-[var(--hover-text-color)] transition duration-300" onClick={() => handleNav(m.idx)}>
+                                <nav className="hover:cursor-pointer hover:text-[var(--hover-text-color)] hover:translate-y-[-3px] transition duration-300" onClick={() => handleNav(m.idx)}>
                                     {m.title}
                                 </nav>
                             )
