@@ -1,0 +1,68 @@
+{
+    "ramenData": [
+        {
+            "uri": "/photos/ramen_1.png",
+            "alt": 1
+        },
+        {
+            "uri": "./photos/ramen_2.png",
+            "alt": 2
+        },
+        {
+            "uri": "./photos/ramen_3.png",
+            "alt": 3
+        },
+        {
+            "uri": "./photos/ramen_4.png",
+            "alt": 4
+        },
+        {
+            "uri": "./photos/ramen_5.png",
+            "alt": 5
+        }
+    ],
+    "musicData": [
+        {
+            "uri": "/photos/music_1.png",
+            "alt": 1
+        },
+        {
+            "uri": "./photos/music_2.png",
+            "alt": 2
+        },
+        {
+            "uri": "./photos/music_3.png",
+            "alt": 3
+        },
+        {
+            "uri": "./photos/music_4.png",
+            "alt": 4
+        },
+        {
+            "uri": "./photos/music_5.png",
+            "alt": 5
+        }
+    ],
+    "sportsData": [
+        {
+            "uri": "/photos/sports_1.png",
+            "alt": 1
+        },
+        {
+            "uri": "./photos/sports_2.png",
+            "alt": 2
+        },
+        {
+            "uri": "./photos/sports_3.png",
+            "alt": 3
+        },
+        {
+            "uri": "./photos/sports_4.png",
+            "alt": 4
+        },
+        {
+            "uri": "./photos/sports_5.png",
+            "alt": 5
+        }
+    ]
+}
