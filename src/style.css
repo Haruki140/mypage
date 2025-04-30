@@ -33,15 +33,16 @@
 
 @theme {
    --breakpoint-tiny: 380px;
-   --breakpoint-form: 560px;
 }
 
 :root {
   --header-color: #D4C9BE;
+  --hover-header-color: #cfbaa4;
   --body-color: #EEEBE4;
   --background-color: #F1EFEC;
   --text-color: #123458;
   --hover-text-color: #2469b2;
+  --shadow-color: #5a6f84;
   --title-font: "Source Serif Pro"
 }
 
@@ -49,7 +50,7 @@
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-  font-family: "Hiragino Sans"
+  font-family: "Noto Sans JP', sans-serif"
 }
 
 h1,
