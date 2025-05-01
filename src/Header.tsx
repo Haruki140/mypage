@@ -1,14 +1,7 @@
 import React, {useState, useEffect, FC} from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import './style.css'
-
-type Elements = {
-    homeElement: HTMLElement | null,
-    aboutElement: HTMLElement | null,
-    workElement: HTMLElement | null,
-    skillElement: HTMLElement | null,
-    contactElement: HTMLElement | null,
-}
+import { Elements, pairElements } from "type";
 
 
 const Header: FC = () => {
@@ -21,8 +14,11 @@ const Header: FC = () => {
         contactElement: null,
     });
     const location = useLocation();
+    const navigate = useNavigate();
 
-    const menu = [
+    const sleep = (time: number) => new Promise((resolve) => setTimeout(resolve, time));//timeはミリ秒
+
+    const menu: pairElements[] = [
         {
             title: "Home",
             idx: elements.homeElement,
@@ -46,11 +42,11 @@ const Header: FC = () => {
     ];
 
     useEffect(() => {
-        const home = document.getElementById("home");
-        const about = document.getElementById("about");
-        const work = document.getElementById("work");
-        const skill = document.getElementById("skill");
-        const contact = document.getElementById("contact");
+        const home = document.getElementById("Home");
+        const about = document.getElementById("About");
+        const work = document.getElementById("Works");
+        const skill = document.getElementById("Skills");
+        const contact = document.getElementById("Contact");
 
         setElements({
             homeElement: home,
@@ -59,18 +55,37 @@ const Header: FC = () => {
             skillElement: skill,
             contactElement: contact,
         })
-    }, [location])
 
-    const handleNav = (element: HTMLElement | null) => {
-        if (element) {
-            // console.log("ログ", element.getAttribute("id"))
-            if (element.getAttribute("id") === "home") {
+        const backPhase = async () => {
+            const title = localStorage.getItem("title");
+            localStorage.removeItem("title");
+            if (title) {
+                const newElement = document.getElementById(title)
+                if (newElement) {
+                    handleNav({title: title, idx: newElement});
+                }
+            }
+        }
+
+        if (localStorage.getItem("title")) backPhase();
+        
+    }, [location.pathname])
+
+    const handleNav = (element: pairElements) => {
+        if (location.pathname === "/detail") {
+            localStorage.setItem("title", element.title);
+            navigate("/");
+            return;
+        }
+        
+        if (element.idx) {
+            if (element.title === "Home") {
                   window.scroll({
                     top: 0,
                     behavior: "smooth",
                 });
             } else {
-                element.scrollIntoView({
+                element.idx.scrollIntoView({
                     behavior: "smooth",
                 })
             }
@@ -85,7 +100,7 @@ const Header: FC = () => {
                     <div className="hidden md:flex md:justify-end lg:text-[32px] md:text-[28px] xl:gap-16 lg:gap-10 gap-6 lg:pr-10 pr-4">
                         {menu.map(m => {
                             return (
-                                <nav key={m.title} className="hover:cursor-pointer hover:text-[var(--hover-text-color)] hover:translate-y-[-3px] transition duration-300" onClick={() => handleNav(m.idx)}>
+                                <nav key={m.title} className="hover:cursor-pointer hover:text-[var(--hover-text-color)] hover:translate-y-[-3px] transition duration-300" onClick={() => handleNav(m)}>
                                     {m.title}
                                 </nav>
                             )
@@ -124,7 +139,7 @@ const Header: FC = () => {
                                 className="hover:cursor-pointer hover:bg-[var(--hover-header-color)]"
                                 onClick={() => {
                                     setIsOpenMenu(false);
-                                    handleNav(m.idx);
+                                    handleNav(m);
                                 }}
                             >
                                 {m.title}

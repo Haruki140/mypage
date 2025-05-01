@@ -2,19 +2,13 @@ import React, { FC } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
+import { Photo } from "type";
 
-const photoData = [
-    {
-        uri: "./src/assets/home.jpg",
-        alt: 1,
-    },
-    {
-        uri: './src/assets/test2.png',
-        alt: 2,
-    }
-]
+interface SliderProps {
+    photoData: Photo[]
+}
 
-const Slider: FC = () => {
+const Slider: FC<SliderProps> = ({photoData}) => {
     return (
         <Swiper
             autoplay={{
