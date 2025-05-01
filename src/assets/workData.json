@@ -1,0 +1,33 @@
+{
+    "workData": [
+        {
+            "id": 1,
+            "title": "自分のポートフォリオを作成",
+            "date": "2025/4/30",
+            "abst": "自分のサイトを作りました",
+            "detail": "自分のポートフォリオを作成してみました．就活を行うにあたって自分の活動をわかりやすく示すために作成しました．使用技術はReactです．よければゆっくりみていてくださいな，文字数稼ぎも大変ですわ．",
+            "skills": "React, TypeScript, Tailwind CSS",
+            "links": [
+                {
+                    "icon": "/icons/Github.svg",
+                    "uri": "https://github.com/Haruki140/mypage",
+                    "alt": 1
+                }
+            ],
+            "photos": [
+                {
+                    "uri": "/src/assets/home.jpg",
+                    "alt": 1
+                },
+                {
+                    "uri": "/src/assets/test.png",
+                    "alt": 2
+                },
+                {
+                    "uri": "/src/assets/test2.png",
+                    "alt": 3
+                }
+            ]
+        }
+    ]
+}
