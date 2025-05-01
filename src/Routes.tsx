@@ -3,20 +3,20 @@ import { Route, Routes, BrowserRouter } from "react-router-dom";
 import Home from "./Home";
 import Detail from "./Detail";
 import { FC } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
+import NotFound from "./NotFound";
 
 const Router: FC = () => {
+
     return (
-        <BrowserRouter>
-            <Header />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/detail" element={<Detail />} />
-                </Routes>
-            <Footer />
+        <BrowserRouter> 
+            <Routes> 
+                <Route path="/" element={<Home />} /> 
+                <Route path="/detail" element={<Detail />} /> 
+                <Route path="*" element={<NotFound />} /> 
+            </Routes> 
         </BrowserRouter>
     )
 };
+
 
 export default Router;
