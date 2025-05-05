@@ -16,7 +16,6 @@ const Header: FC = () => {
     const location = useLocation();
     const navigate = useNavigate();
 
-    const sleep = (time: number) => new Promise((resolve) => setTimeout(resolve, time));//timeはミリ秒
 
     const menu: pairElements[] = [
         {
@@ -96,7 +95,7 @@ const Header: FC = () => {
         <div className="bg-[var(--header-color)] fixed top-0 left-0 right-0 z-50 shadow-lg/20">
             <div className="max-w-360 h-20 mx-auto">
                 <div className="flex items-center justify-between h-full">
-                    <h1 className="lg:text-5xl mobile:text-[40px] tiny:text-4xl text-3xl gap-75 lg:pl-14 mobile:pl-8 pl-3">Portfolio</h1>
+                    <h1 className="lg:text-5xl mobile:text-[40px] tiny:text-4xl text-3xl gap-75 lg:pl-14 mobile:pl-8 pl-3">Haruki140</h1>
                     <div className="hidden md:flex md:justify-end lg:text-[32px] md:text-[28px] xl:gap-16 lg:gap-10 gap-6 lg:pr-10 pr-4">
                         {menu.map(m => {
                             return (

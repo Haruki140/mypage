@@ -127,21 +127,21 @@ const Home:FC = () => {
           {workData.map((work, id) => {
             return (
               <div 
-                className='flex flex-col items-center rounded-2xl shadow-xl hover:translate-y-[-7px] hover:cursor-pointer transition duration-400'
-                key={work.id}
+                className='flex flex-col items-center rounded-2xl shadow-xl border-[#cdaf92] border-2 hover:translate-y-[-7px] hover:cursor-pointer transition duration-400'
+                key={id}
                 onClick={ () => {
                   localStorage.setItem("height", window.scrollY.toString())
                   navigate('/detail', { state: workData[id]});
                   
                 }}
               >
-                <img src={work.photos[0].uri} className='sm:h-56 h-50 w-full object-cover rounded-t-xl' />
-                <div className='flex flex-col items-center lg:h-40 sm:h-40 h-34 w-full text-center px-5 rounded-b-xl border-[#cdaf92] border-2'>
-                  <h2 className='tiny:text-2xl text-xl font-semibold py-1.5 inline-block text-left relative'>
+                <img src={work.photos[0].uri} className='h-50 w-full object-cover rounded-t-xl border-b-2 border-[#313131]' />
+                <div className='flex flex-col items-center h-full text-center px-5 rounded-b-xl'>
+                  <h2 className='mobile:text-2xl text-xl font-semibold py-1.5 inline-block text-left relative'>
                     {work.title}
-                    <span className='absolute bg-[#cdaf92c6] w-70 h-[2px] bottom-0 left-1/2 transform -translate-x-1/2 rounded-3xl' />
+                    <span className='absolute bg-[#cdaf92c6] w-full h-[2px] bottom-0 left-1/2 transform -translate-x-1/2 rounded-3xl' />
                   </h2>
-                  <p className='pt-4 tiny:text-[20px] font-light text-sm pb-2 inline-block text-left'>{work.abst}</p>
+                  <p className='py-4 tiny:text-[20px] mb-5 font-light text-sm inline-block text-left'>{work.abst}</p>
                 </div>
               </div>
             )
@@ -170,10 +170,10 @@ const Home:FC = () => {
               <img className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/Vite.svg' alt='1' />
               <img className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/TailwindCSS.svg' alt='1' />
             </div>
-            <div className='flex flex-col tiny:gap-2 md:text-3xl tiny:text-2xl text-xl pt-7.5'>
-              <p>HTML：Webアプリ開発</p>
-              <p>CSS：Webアプリ開発</p>
-              <p>JavaScript：Webアプリ開発</p>
+            <div className='flex flex-col mobile:gap-2 md:text-3xl mobile:text-2xl text-xl pt-7.5'>
+              <li>主にWebアプリ開発で使用</li>
+              <li>ReactとVueは始めて１年</li>
+              <li>TailwindはPortfolio作成で初導入</li>
             </div>
           </div>
           <div className='flex flex-col 2xl:mx-70 xl:mx-60 lg:mx-50 md:mx-30 sm:mx-20 mx-5 pt-5'>
@@ -190,10 +190,11 @@ const Home:FC = () => {
               <img className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/Gradle.svg' alt='1' />
               <img className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/Mariadb.svg' alt='1' />
             </div>
-            <div className='flex flex-col tiny:gap-2 md:text-3xl tiny:text-2xl text-xl pt-7.5'>
-              <p>Python：Webアプリ開発</p>
-              <p>Java：Webアプリ開発</p>
-              <p>MySQL：Webアプリ開発</p>
+            <div className='flex flex-col mobile:gap-2 md:text-3xl mobile:text-2xl text-xl pt-7.5'>
+              <li>Python, Cは研究で使用</li>
+              <li>C++は競プロ用</li>
+              <li>他はWebアプリ開発が基本</li>
+              <li>Django, Springbootは始めて１年</li>
             </div>
           </div>
           <div className='flex flex-col 2xl:mx-70 xl:mx-60 lg:mx-50 md:mx-30 sm:mx-20 mx-5 pt-5'>
@@ -209,10 +210,11 @@ const Home:FC = () => {
               <img className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/Eclipse.svg' alt='1' />
               <img className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/Vercel.svg' alt='1' />
             </div>
-            <div className='flex flex-col tiny:gap-2 md:text-3xl tiny:text-2xl text-xl pt-7.5'>
-              <p>Docker：Webアプリ開発</p>
-              <p>GitHub：Webアプリ開発</p>
-              <p>VSCode：Webアプリ開発</p>
+            <div className='flex flex-col mobile:gap-2 md:text-3xl mobile:text-2xl text-xl pt-7.5'>
+              <li>VSCodeが一番使うエディタ</li>
+              <li>Linuxは研究用サーバで導入</li>
+              <li>DockerはWebアプリ開発に使用</li>
+              <li>基本的にFigmaでデザイン</li>
             </div>
           </div>
         </div>

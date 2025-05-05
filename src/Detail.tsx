@@ -45,23 +45,29 @@ const Detail: FC = () => {
                         <span className='absolute bg-[var(--text-color)] w-full h-[3px] bottom-0 left-1/2 transform -translate-x-1/2 rounded-3xl' />
                     </h1>
                     <div className="grid lg:grid-cols-7 grid-cols-1 gap-10 justify-center pt-10 px-5">
-                        <div className="flex flex-col lg:col-span-3 max-lg:order-2 sm:text-2xl mobile:text-xl text-lg  pt-5">
+                        <div className="flex flex-col lg:col-span-3 max-lg:order-2 sm:text-xl mobile:text-lg text-md pt-0">
                             <h2 className="pb-2 font-semibold">詳細</h2>
-                            <p className="pb-3 relative">
+                            <p className="pb-3 leading-relaxed relative">
                                 {workData.detail}
                             </p>
-                            <h2 className=" pt-8 pb-2 font-semibold">使用技術</h2>
-                            <p>{workData.skills}</p>
-                            <h2 className=" pt-8 pb-2 font-semibold">関連リンク</h2>
-                            <div className="pl-2 pt-2 flex flex-wrap gap-7">
-                                {workData.links.map(link => {
-                                    return (
-                                        <a key={link.alt} href={link.uri}>
-                                            <img className="h-13 w-13" src={link.icon} />
-                                        </a>
-                                    )
-                                })}
-                            </div>
+                            <h2 className="pt-8 pb-2 font-semibold">使用技術</h2>
+                            <p className="pl-2">{workData.skills}</p>
+                            <h2 className="pt-8 pb-2 font-semibold">関連リンク</h2>
+                            {workData.links.length > 0 ? (
+                                <div className="pl-2 pt-2 flex flex-wrap mobile:gap-7 gap-4">
+                                    {workData.links.map(link => {
+                                        return (
+                                            <a key={link.alt} href={link.uri}>
+                                                <img className="mobile:h-13 h-8 mobile:w-13 w-8" src={link.icon} />
+                                            </a>
+                                        )
+                                    })}
+                                </div>
+                            ) : (
+                                <div className="p-0">
+                                    なし
+                                </div>
+                            )}
                         </div>
                         <div className="lg:col-span-4 max-lg:order-1">
                             <Swiper
@@ -69,14 +75,14 @@ const Detail: FC = () => {
                                 navigation={true}
                                 thumbs={{ swiper: thumbsSwiper }}
                                 modules={[FreeMode, Thumbs]}
-                                className="mb-10 rounded-2xl"
+                                className="mb-10 rounded-lg flex justify-end items-end overflow-hidden"
                             >
                                 {workData.photos.map(photo => {
                                     return (
                                         <SwiperSlide>
                                             <img 
                                                 key={photo.alt}
-                                                className="w-full h-auto mx-auto object-cover rounded-2xl"
+                                                className="object-cover rounded-2xl border-[#cdaf92] border-2"
                                                 src={photo.uri}
                                             />
                                         </SwiperSlide>
@@ -100,7 +106,7 @@ const Detail: FC = () => {
                                         <SwiperSlide>
                                             <img 
                                                 key={photo.alt}
-                                                className="w-full h-auto object-cover rounded-2xl mx-auto"
+                                                className="w-full h-auto object-cover rounded-2xl mx-auto border-[#cdaf92] border-2"
                                                 src={photo.uri}
                                             />
                                         </SwiperSlide>
