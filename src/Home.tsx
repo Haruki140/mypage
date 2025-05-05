@@ -36,7 +36,7 @@ const Home:FC = () => {
       <Header />
       {/* メイン */}
       <div id="Home" className='mx-auto mt-20 relative'>
-        <img className="w-full object-cover" src="./src/assets/home.jpg"></img>
+        <img className="w-full object-cover" src="./photos/home.jpg"></img>
         <div className="absolute w-full text-center tiny:pl-10 pl-5" style={{top: "42%", left: "50%", transform: "translate(-50%, -50%)"}}>
           <h1 className='2xl:text-7xl sm:text-6xl mobile:text-5xl tiny:text-4xl text-3xl font-semibold sm:text-stroke-name mobile:text-stroke-name-tablet text-stroke-name-mobile'>
             Haruki Ishimaru
