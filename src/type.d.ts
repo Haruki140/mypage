@@ -29,3 +29,5 @@ declare module 'type' {
         photos: Photo[],
     }
 }
+
+declare module 'swiper/css';

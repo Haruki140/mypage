@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "./style.css"
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';

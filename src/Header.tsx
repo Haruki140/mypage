@@ -1,4 +1,4 @@
-import React, {useState, useEffect, FC} from "react";
+import {useState, useEffect, FC} from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import './style.css'
 import { Elements, pairElements } from "type";

@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import {FC} from 'react';
 
 function getCurrentYear() {
     const date = new Date()
