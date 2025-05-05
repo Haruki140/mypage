@@ -1,12 +1,11 @@
 {
     "workData": [
         {
-            "id": 1,
-            "title": "自分のポートフォリオを作成",
+            "title": "自分のポートフォリオサイトを作成",
             "date": "2025/4/30",
-            "abst": "自分のサイトを作りました",
-            "detail": "自分のポートフォリオを作成してみました．就活を行うにあたって自分の活動をわかりやすく示すために作成しました．使用技術はReactです．よければゆっくりみていてくださいな，文字数稼ぎも大変ですわ．",
-            "skills": "React, TypeScript, Tailwind CSS",
+            "abst": "これまでの取り組みをまとめたポートフォリオサイトを作成しました．",
+            "detail": "自分のこれまでの取り組みをまとめたポートフォリオサイトを作成しました．就活を行うにあたって，エントリーシートだけでなく，自分の活動をわかりやすく示したいと感じ，作成に至りました．今回はレスポンシブデザインに挑戦し，スマートフォンでも見やすいデザイン設計を行いました．今後の新たな取り組みも随時更新していきたいと考えています．",
+            "skills": "React, TypeScript, Tailwind, Vite, Figma",
             "links": [
                 {
                     "icon": "/icons/Github.svg",
@@ -16,15 +15,120 @@
             ],
             "photos": [
                 {
-                    "uri": "/src/assets/home.jpg",
+                    "uri": "/photos/work5_1.png",
                     "alt": 1
                 },
                 {
-                    "uri": "/src/assets/test.png",
+                    "uri": "/photos/work5_2.png",
                     "alt": 2
                 },
                 {
-                    "uri": "/src/assets/test2.png",
+                    "uri": "/photos/work5_3.png",
+                    "alt": 3
+                }
+            ]
+        },
+        {
+            "title": "関西支部長賞奨励賞を受賞",
+            "date": "2025/3/18",
+            "abst": "電子情報通信学会関西支部第29回学生会研究発表講演会で，関西支部長賞奨励賞を受賞しました．",
+            "detail": "2025年3月18日に大阪公立大学杉本キャンパスで開催された，電子情報通信学会関西支部第29回学生会研究発表講演会で，関西支部長賞奨励賞を受賞しました．これまでの取り組みが認められたような気がして非常に嬉しかったです．この賞をいただけたことは，私にとって大きな自信となり，さらなる研究に対するモチベーションにもつながりました．今後も，今回の成果をさらに発展させて，より実用的で社会に貢献できる研究を目指したいと思っています．",
+            "skills": "なし",
+            "links": [
+                {
+                    "icon": "/icons/Link2.svg",
+                    "uri": "https://www.omu.ac.jp/i/info/news/entry-17102.html",
+                    "alt": 1
+                }
+            ],
+            "photos": [
+                {
+                    "uri": "/photos/work4_1.png",
+                    "alt": 1
+                },
+                {
+                    "uri": "/photos/work4_2.png",
+                    "alt": 2
+                },
+                {
+                    "uri": "/photos/work4_3.png",
+                    "alt": 3
+                }
+            ]
+        },
+        {
+            "title": "ラーメン記録アプリを作成",
+            "date": "2025/3/1",
+            "abst": "お気に入りのラーメンを記録するWebアプリを作成しました．",
+            "detail": "GoogleMapのAPIを使用した，お気に入りのラーメンを記録するWebアプリを作成しました．チーム開発を行う中で，自分でもWebアプリを作りたいと思い，開発に至りました．店名で検索して，自由にリストに追加できます．店名や営業時間などの基本情報の他に，そこで撮られた写真や口コミなども確認できます．他にも独自のタグをつけて管理しやすくしたり，マップ上にピンを表示してどこに店舗があるのかを視覚的に分かりやすくしました．",
+            "skills": "React, TypeScript, SpringBoot, MariaDB, Docker, Figma",
+            "links": [
+                {
+                    "icon": "/icons/Github.svg",
+                    "uri": "https://github.com/Haruki140/GoogleMap_SavedList",
+                    "alt": 1
+                },
+                {
+                    "icon": "/icons/Movie.svg",
+                    "uri": "https://drive.google.com/drive/folders/1amI6OM3odVW6SBFUfxWRq78pDuIgod5h?usp=drive_link",
+                    "alt": 2
+                }
+            ],
+            "photos": [
+                {
+                    "uri": "/photos/work3_1.png",
+                    "alt": 1
+                },
+                {
+                    "uri": "/photos/work3_2.png",
+                    "alt": 2
+                },
+                {
+                    "uri": "/photos/work3_3.png",
+                    "alt": 3
+                }
+            ]
+        },
+        {
+            "title": "卒業論文を執筆",
+            "date": "2025/2/14",
+            "abst": "ネットワークに接続されているIoT機器を同定する研究を行いました",
+            "detail": "通信におけるDNSクエリを観測することで，ネットワークに接続されているIoT機器を同定する研究を行いました．DNSクエリに含まれているドメインから特徴量ベクトルを作成し，機械学習を行うことでIoT機器を特定しています．現代のネット社会において，増加するIoT機器の管理が必要になります．この研究を通じて，IoT機器をその種類や用途に応じて自動で分類し，適切に管理することを目指します．",
+            "skills": "C, Python, Linux, Latex, Wireshark",
+            "links": [],
+            "photos": [
+                {
+                    "uri": "/photos/work2_1.png",
+                    "alt": 1
+                },
+                {
+                    "uri": "/photos/work2_2.png",
+                    "alt": 2
+                },
+                {
+                    "uri": "/photos/work2_3.png",
+                    "alt": 3
+                }
+            ]
+        },
+        {
+            "title": "基本&応用情報技術者試験に合格",
+            "date": "2025/1/30",
+            "abst": "基本情報技術者試験と応用情報技術者試験に合格しました",
+            "detail": "基本情報技術者試験と応用情報技術者試験に合格しました．自分が大学で学んだことを何かの形で示したいと考え，受験に至りました．今までの知識の復習と，新たに得た技術や概念を実際に試験問題を通じて深く理解することで，学びの成果を確認することができました．この経験を通じて，自分のスキルに自信を持つことができ，これからは実務でこの知識を活かしながら，さらに高度な専門知識を習得していきたいと考えています．",
+            "skills": "なし",
+            "links": [],
+            "photos": [
+                {
+                    "uri": "/photos/work1_1.png",
+                    "alt": 1
+                },
+                {
+                    "uri": "/photos/work1_2.png",
+                    "alt": 2
+                },
+                {
+                    "uri": "/photos/work1_3.png",
                     "alt": 3
                 }
             ]
