@@ -1,4 +1,4 @@
-import React, {FC, useEffect} from 'react'
+import React, {FC, useEffect, useRef, useState} from 'react'
 import Slider from './Slider';
 
 import photos from "./assets/favPhotoData.json";
@@ -9,10 +9,21 @@ import Footer from './Footer';
 
 
 const Home:FC = () => {
+  const [isShowFinish, setIsShowFinish] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+  const formRef = useRef<HTMLFormElement>(null);
   const workData = works.workData;
   const photoData = photos;
+
+  const ContactGoogleForm = {
+    url: 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSctW2CxrK2hGv0X3g0LDAjqXzm9RyF9sip5rboRhsSxPcRv5Q/formResponse',
+    name: 'entry.527111157',
+    address: 'entry.1743407270',
+    title: 'entry.170708196',
+    text: 'entry.311883619',
+  }
+    
 
   useEffect(() => {
     if (location.state) {
@@ -26,11 +37,11 @@ const Home:FC = () => {
       {/* メイン */}
       <div id="Home" className='mx-auto mt-20 relative'>
         <img className="w-full object-cover" src="./src/assets/home.jpg"></img>
-        <div className="absolute w-full text-center pl-10" style={{top: "42%", left: "50%", transform: "translate(-50%, -50%)"}}>
-          <h1 className='2xl:text-7xl sm:text-6xl tiny:text-5xl text-3xl font-semibold sm:text-stroke-name tiny:text-stroke-name-tablet text-stroke-name-mobile'>
+        <div className="absolute w-full text-center tiny:pl-10 pl-5" style={{top: "42%", left: "50%", transform: "translate(-50%, -50%)"}}>
+          <h1 className='2xl:text-7xl sm:text-6xl mobile:text-5xl tiny:text-4xl text-3xl font-semibold sm:text-stroke-name mobile:text-stroke-name-tablet text-stroke-name-mobile'>
             Haruki Ishimaru
           </h1>
-          <h1 className='2xl:text-5xl sm:text-4xl tiny:text-3xl text-xl font-semibold sm:text-stroke-sub tiny:text-stroke-sub-tablet text-stroke-sub-mobile'>
+          <h1 className='2xl:text-5xl sm:text-4xl mobile:text-3xl tiny:text-2xl text-xl font-semibold sm:text-stroke-sub mobile:text-stroke-sub-tablet text-stroke-sub-mobile'>
             Software Engineer
           </h1>
         </div>
@@ -48,7 +59,7 @@ const Home:FC = () => {
               className='lg:h-50 md:h-40 h-35 lg:w-50 md:w-40 w-35 rounded-full object-cover'
               src='/photos/profile.png'
             />
-            <div className='lg:w-175 md:w-120 w-115 lg:text-3xl md:text-2xl text-xl lg:pl-15 inline-block text-left'>
+            <div className='lg:w-175 md:w-120 w-115 lg:text-3xl md:text-2xl text-xl lg:pl-15 inline-block text-left px-3'>
               大阪公立大学大学院 情報学研究科 基幹情報学専攻の石丸晴基です．
               機械学習を用いたIoT機器の識別に関する研究を行っています．<br />
               加えて，研究室内でWebアプリのチーム開発に取り組むほか，個人開発も行っています．
@@ -76,7 +87,7 @@ const Home:FC = () => {
               <div className='h-70 w-70 rounded-4xl shadow-2xl'>
                 <Slider photoData={photoData.ramenData} />
               </div>
-              <p className='w-70 text-[24px] inline-block text-left mt-3'>
+              <p className='w-70 md:text-2xl text-xl inline-block text-left mt-3'>
                 ラーメン大好きです！！いつか全国のラーメンを食べ歩きたい．
               </p>
             </div>
@@ -87,7 +98,7 @@ const Home:FC = () => {
               <div className='h-70 w-70 rounded-4xl shadow-2xl'>
                 <Slider photoData={photoData.musicData} />
               </div>
-              <p className='w-70 text-[24px] inline-block text-left mt-3'>
+              <p className='w-70 md:text-2xl text-xl inline-block text-left mt-3'>
                 セカオワは小さい頃から聴いていて，ライブには欠かさず参戦します．
               </p>
             </div>
@@ -98,7 +109,7 @@ const Home:FC = () => {
               <div className='h-70 w-70 rounded-4xl shadow-2xl'>
                 <Slider photoData={photoData.sportsData} />
               </div>
-              <p className='w-70 text-[24px] inline-block text-left mt-3'>
+              <p className='w-70 md:text-2xl text-xl inline-block text-left mt-3'>
                 中高の部活は野球とバドミントンでした．最近はスノボもします．
               </p>
             </div>
@@ -213,32 +224,74 @@ const Home:FC = () => {
           Contact me
           <span className='absolute bg-[var(--text-color)] md:w-110 sm:w-90 w-70 sm:h-[5px] h-[4px] bottom-0 left-1/2 transform -translate-x-1/2 rounded-3xl' />
         </h1>
-        <div className='sm:h-140 h-165 sm:w-132 w-72 pt-5 border-[3px] gap-5 border-[#D4C9BE] flex flex-col items-center sm:mt-15 mt-7 rounded-2xl'>
+        <form 
+          className='sm:h-140 h-135 sm:w-132 w-72 pt-5 border-[3px] gap-5 border-[#D4C9BE] flex flex-col items-center sm:mt-15 mt-5 rounded-2xl'
+          ref={formRef}
+          onSubmit={(e: React.FormEvent<HTMLFormElement>) => {
+            e.preventDefault();
+            const formData = new FormData(formRef.current!);
+            fetch(ContactGoogleForm.url, {
+              method: 'POST',
+              mode: 'no-cors',
+              body: formData
+            })
+            .then(() => {
+              formRef.current?.reset();
+              setIsShowFinish(true);
+            });
+          }}
+        >
           <div className='flex flex-wrap justify-center sm:gap-12 gap-8'>
             <div className='flex flex-col'>
-              <h2 className='sm:text-[28px] text-2xl'>お名前</h2>
-              <div className='h-12 sm:w-49 w-56 border-[3px] border-[#D4C9BE] rounded-xl'></div>
+              <label className='sm:text-2xl text-xl'>お名前</label>
+              <input 
+                className='sm:h-12 h-10 sm:w-49 w-56 border-[3px] border-[#D4C9BE] rounded-xl'
+                type='text'
+                id='name'
+                name={ContactGoogleForm.name}
+                required
+              />
             </div>
             <div className='flex flex-col'>
-              <h2 className='sm:text-[28px] text-2xl'>アドレス</h2>
-              <div className='h-12 sm:w-49 w-56 border-[3px] border-[#D4C9BE] rounded-xl'></div>
+              <label className='sm:text-2xl text-xl'>アドレス</label>
+              <input 
+                className='sm:h-12 h-10 sm:w-49 w-56 border-[3px] border-[#D4C9BE] rounded-xl'
+                type='email'
+                id='address'
+                name={ContactGoogleForm.address}
+                required
+              />
             </div>
           </div>
           <div className='flex flex-col'>
-            <h2 className='sm:text-[28px] text-2xl'>件名</h2>
-            <div className='h-12 sm:w-110 w-56 border-[3px] border-[#D4C9BE] rounded-xl'></div>
+            <label className='sm:text-2xl text-xl'>件名</label>
+            <input 
+              className='sm:h-12 h-10 sm:w-110 w-56 border-[3px] border-[#D4C9BE] rounded-xl'
+              type='text'
+              name={ContactGoogleForm.title}
+              required
+            />
           </div>
           <div className='flex flex-col'>
-            <h2 className='sm:text-[28px] text-2xl'>本文</h2>
-            <div className='h-50 sm:w-110 w-56 border-[3px] border-[#D4C9BE] rounded-xl'></div>
+            <label className='sm:text-2xl text-xl'>本文</label>
+            <textarea 
+              className='sm:h-50 h-30 sm:w-110 w-56 border-[3px] border-[#D4C9BE] rounded-xl'
+              name={ContactGoogleForm.text}
+              required
+            />
           </div>
           <button 
-            className='h-12 w-31 border-[3px] sm:text-[26px] text-2xl border-[#D4C9BE] rounded-xl'
+            className='sm:h-12 h-10 w-31 sm:text-[26px] text-2xl bg-[#D4C9BE] hover:bg-[#d0b091] rounded-xl transition duration-200'
             type='submit'
           >
             送信する
           </button>
-        </div>
+        </form>
+        {isShowFinish ? (
+          <div className='sm:text-3xl text-2xl mt-10'>
+            送信しました！
+          </div>
+        ): (<></>)}
       </div>
       <Footer />
     </>
