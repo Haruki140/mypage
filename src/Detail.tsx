@@ -36,8 +36,8 @@ const Detail: FC = () => {
         <>
             <Header />
             <div className="flex flex-col justify-center items-center">
-                <div className="flex flex-col max-w-300 mt-20">
-                    <h1 className="md:text-5xl sm:text-4xl text-3xl font-[580] pt-20 pl-5">
+                <div className="flex flex-col max-w-300 mt-20 px-3">
+                    <h1 className="md:text-5xl sm:text-4xl mobile:text-3xl text-2xl font-[580] pt-20 pl-5">
                         {workData.title}
                     </h1>
                     <h1 className="sm:text-3xl text-2xl font-normal font-[var(Source Serif Pro)] pt-5 pb-3 pl-6 relative">
@@ -45,7 +45,7 @@ const Detail: FC = () => {
                         <span className='absolute bg-[var(--text-color)] w-full h-[3px] bottom-0 left-1/2 transform -translate-x-1/2 rounded-3xl' />
                     </h1>
                     <div className="grid lg:grid-cols-7 grid-cols-1 gap-10 justify-center pt-10 px-5">
-                        <div className="flex flex-col lg:col-span-3 max-lg:order-2 sm:text-2xl text-xl  pt-5">
+                        <div className="flex flex-col lg:col-span-3 max-lg:order-2 sm:text-2xl mobile:text-xl text-lg  pt-5">
                             <h2 className="pb-2 font-semibold">詳細</h2>
                             <p className="pb-3 relative">
                                 {workData.detail}
@@ -76,7 +76,7 @@ const Detail: FC = () => {
                                         <SwiperSlide>
                                             <img 
                                                 key={photo.alt}
-                                                className="h-96 w-full mx-auto object-cover rounded-2xl"
+                                                className="w-full h-auto mx-auto object-cover rounded-2xl"
                                                 src={photo.uri}
                                             />
                                         </SwiperSlide>
@@ -100,7 +100,7 @@ const Detail: FC = () => {
                                         <SwiperSlide>
                                             <img 
                                                 key={photo.alt}
-                                                className="h-32 object-cover rounded-2xl mx-auto"
+                                                className="w-full h-auto object-cover rounded-2xl mx-auto"
                                                 src={photo.uri}
                                             />
                                         </SwiperSlide>
@@ -111,7 +111,7 @@ const Detail: FC = () => {
                     </div>
                 </div>
                 <button 
-                    className="text-3xl border-[#cdaf92] border-[3px] rounded-2xl py-4 px-10 mt-25 mb-15 shadow-xl hover:translate-y-[-5px] hover:cursor-pointer transition duration-400"
+                    className="mobile:text-3xl text-xl border-[#cdaf92] border-[3px] rounded-2xl py-4 px-10 mt-25 mb-15 shadow-xl hover:translate-y-[-5px] hover:cursor-pointer transition duration-400"
                     onClick={() => navigate("/", { state: localStorage.getItem("height")})}
                 >
                     ホームに戻る

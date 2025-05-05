@@ -32,7 +32,8 @@
 }
 
 @theme {
-   --breakpoint-tiny: 380px;
+  --breakpoint-mobile: 480px;
+  --breakpoint-tiny: 380px;
 }
 
 :root {
