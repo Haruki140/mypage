@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import "./style.css"
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { FreeMode, Thumbs } from 'swiper/modules';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import Footer from "./Footer";
 import Header from "./Header";
@@ -58,7 +59,7 @@ const Detail: FC = () => {
                                     {workData.links.map(link => {
                                         return (
                                             <a key={link.alt} href={link.uri}>
-                                                <img className="mobile:h-13 h-8 mobile:w-13 w-8" src={link.icon} />
+                                                <LazyLoadImage className="mobile:h-13 h-8 mobile:w-13 w-8" src={link.icon} />
                                             </a>
                                         )
                                     })}
@@ -80,7 +81,7 @@ const Detail: FC = () => {
                                 {workData.photos.map(photo => {
                                     return (
                                         <SwiperSlide>
-                                            <img 
+                                            <LazyLoadImage 
                                                 key={photo.alt}
                                                 className="object-cover rounded-2xl border-[#cdaf92] border-2"
                                                 src={photo.uri}
@@ -104,7 +105,7 @@ const Detail: FC = () => {
                                 {workData.photos.map(photo => {
                                     return (
                                         <SwiperSlide>
-                                            <img 
+                                            <LazyLoadImage 
                                                 key={photo.alt}
                                                 className="w-full h-auto object-cover rounded-2xl mx-auto border-[#cdaf92] border-2"
                                                 src={photo.uri}
