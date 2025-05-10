@@ -59,7 +59,7 @@ const Home:FC = () => {
           <div className='flex items-center flex-wrap justify-center gap-10 mt-10'>
             <LazyLoadImage 
               className='lg:h-50 md:h-40 h-35 lg:w-50 md:w-40 w-35 rounded-full object-cover'
-              src='/photos/profile.png'
+              src='/compressed-photos/profile.png'
             />
             <div className='lg:w-175 md:w-120 w-115 lg:text-3xl md:text-2xl text-xl lg:pl-15 inline-block text-left px-3'>
               大阪公立大学大学院 情報学研究科 基幹情報学専攻の石丸晴基です．
