@@ -15,15 +15,15 @@
             ],
             "photos": [
                 {
-                    "uri": "/photos/work5_1.png",
+                    "uri": "/compressed-photos/work5_1.png",
                     "alt": 1
                 },
                 {
-                    "uri": "/photos/work5_2.png",
+                    "uri": "/compressed-photos/work5_2.png",
                     "alt": 2
                 },
                 {
-                    "uri": "/photos/work5_3.png",
+                    "uri": "/compressed-photos/work5_3.png",
                     "alt": 3
                 }
             ]
@@ -43,15 +43,15 @@
             ],
             "photos": [
                 {
-                    "uri": "/photos/work4_1.png",
+                    "uri": "/compressed-photos/work4_1.png",
                     "alt": 1
                 },
                 {
-                    "uri": "/photos/work4_2.png",
+                    "uri": "/compressed-photos/work4_2.png",
                     "alt": 2
                 },
                 {
-                    "uri": "/photos/work4_3.png",
+                    "uri": "/compressed-photos/work4_3.png",
                     "alt": 3
                 }
             ]
@@ -76,15 +76,15 @@
             ],
             "photos": [
                 {
-                    "uri": "/photos/work3_1.png",
+                    "uri": "/compressed-photos/work3_1.png",
                     "alt": 1
                 },
                 {
-                    "uri": "/photos/work3_2.png",
+                    "uri": "/compressed-photos/work3_2.png",
                     "alt": 2
                 },
                 {
-                    "uri": "/photos/work3_3.png",
+                    "uri": "/compressed-photos/work3_3.png",
                     "alt": 3
                 }
             ]
@@ -98,15 +98,15 @@
             "links": [],
             "photos": [
                 {
-                    "uri": "/photos/work2_1.png",
+                    "uri": "/compressed-photos/work2_1.png",
                     "alt": 1
                 },
                 {
-                    "uri": "/photos/work2_2.png",
+                    "uri": "/compressed-photos/work2_2.png",
                     "alt": 2
                 },
                 {
-                    "uri": "/photos/work2_3.png",
+                    "uri": "/compressed-photos/work2_3.png",
                     "alt": 3
                 }
             ]
@@ -120,15 +120,15 @@
             "links": [],
             "photos": [
                 {
-                    "uri": "/photos/work1_1.png",
+                    "uri": "/compressed-photos/work1_1.png",
                     "alt": 1
                 },
                 {
-                    "uri": "/photos/work1_2.png",
+                    "uri": "/compressed-photos/work1_2.png",
                     "alt": 2
                 },
                 {
-                    "uri": "/photos/work1_3.png",
+                    "uri": "/compressed-photos/work1_3.png",
                     "alt": 3
                 }
             ]

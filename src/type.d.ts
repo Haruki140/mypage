@@ -31,3 +31,6 @@ declare module 'type' {
 }
 
 declare module 'swiper/css';
+declare module 'react-lazy-load-image-component';
+// declare module 'imagemin';
+// declare module 'imagemin-mozjpeg'

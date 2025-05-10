@@ -7,6 +7,8 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 
 const Home:FC = () => {
   const [isShowFinish, setIsShowFinish] = useState(false);
@@ -36,7 +38,7 @@ const Home:FC = () => {
       <Header />
       {/* メイン */}
       <div id="Home" className='mx-auto mt-20 relative'>
-        <img className="w-full object-cover" src="./photos/home.jpg"></img>
+        <LazyLoadImage className="w-full object-cover" src="./compressed-photos/home.jpg"></LazyLoadImage>
         <div className="absolute w-full text-center tiny:pl-10 pl-5" style={{top: "42%", left: "50%", transform: "translate(-50%, -50%)"}}>
           <h1 className='2xl:text-7xl sm:text-6xl mobile:text-5xl tiny:text-4xl text-3xl font-semibold sm:text-stroke-name mobile:text-stroke-name-tablet text-stroke-name-mobile'>
             Haruki Ishimaru
@@ -55,7 +57,7 @@ const Home:FC = () => {
             <span className='absolute bg-[var(--text-color)] md:w-95 sm:w-80 w-65 sm:h-[5px] h-[4px] bottom-0 left-1/2 transform -translate-x-1/2 rounded-3xl' />
           </h1>
           <div className='flex items-center flex-wrap justify-center gap-10 mt-10'>
-            <img 
+            <LazyLoadImage 
               className='lg:h-50 md:h-40 h-35 lg:w-50 md:w-40 w-35 rounded-full object-cover'
               src='/photos/profile.png'
             />
@@ -65,16 +67,16 @@ const Home:FC = () => {
               加えて，研究室内でWebアプリのチーム開発に取り組むほか，個人開発も行っています．
               <div className='flex gap-5 pl-1 pt-3'>
                 <a href='https://github.com/Haruki140'>
-                  <img className='md:h-10 h-9 md:w-10 w-9' src='/icons/Github.svg' alt='1' />
+                  <LazyLoadImage className='md:h-10 h-9 md:w-10 w-9' src='/icons/Github.svg' alt='1' />
                 </a>
                 <a href='https://qiita.com/Haruki140'>
-                  <img className='md:h-10 h-9 md:w-10 w-9' src='/icons/Qiita.png' alt='1' />
+                  <LazyLoadImage className='md:h-10 h-9 md:w-10 w-9' src='/icons/Qiita.png' alt='1' />
                 </a>
                 <a href='https://www.linkedin.com/in/%E6%99%B4%E5%9F%BA-%E7%9F%B3%E4%B8%B8-182906362/'>
-                  <img className='md:h-10 h-9 md:w-10 w-9' src='/icons/LinkedIn.svg' alt='1' />
+                  <LazyLoadImage className='md:h-10 h-9 md:w-10 w-9' src='/icons/LinkedIn.svg' alt='1' />
                 </a>
                 <a href='https://www.instagram.com/marulog.ramen?igsh=MTZ2M3B2cWc2NmhweA%3D%3D&utm_source=qr'>
-                  <img className='md:h-10 h-9 md:w-10 w-9' src='/icons/Instagram.svg' alt='1' />
+                  <LazyLoadImage className='md:h-10 h-9 md:w-10 w-9' src='/icons/Instagram.svg' alt='1' />
                 </a>
               </div>
             </div>
@@ -135,7 +137,7 @@ const Home:FC = () => {
                   
                 }}
               >
-                <img src={work.photos[0].uri} className='h-50 w-full object-cover rounded-t-xl border-b-2 border-[#313131]' />
+                <LazyLoadImage src={work.photos[0].uri} className='h-50 w-full object-cover rounded-t-xl border-b-2 border-[#313131]' />
                 <div className='flex flex-col items-center h-full text-center px-5 rounded-b-xl'>
                   <h2 className='mobile:text-2xl text-xl font-semibold py-1.5 inline-block text-left relative'>
                     {work.title}
@@ -161,14 +163,14 @@ const Home:FC = () => {
               FrontEnd
             </h2>
             <div className='flex flex-wrap sm:gap-7 gap-3 mt-3'>
-              <img className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/HTML.svg' alt='1' />
-              <img className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/CSS.svg' alt='1' />
-              <img className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/JavaScript.svg' alt='1' />
-              <img className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/TypeScript.svg' alt='1' />
-              <img className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/React.svg' alt='1' />
-              <img className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/VueJS.svg' alt='1' />
-              <img className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/Vite.svg' alt='1' />
-              <img className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/TailwindCSS.svg' alt='1' />
+              <LazyLoadImage className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/HTML.svg' alt='1' />
+              <LazyLoadImage className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/CSS.svg' alt='1' />
+              <LazyLoadImage className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/JavaScript.svg' alt='1' />
+              <LazyLoadImage className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/TypeScript.svg' alt='1' />
+              <LazyLoadImage className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/React.svg' alt='1' />
+              <LazyLoadImage className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/VueJS.svg' alt='1' />
+              <LazyLoadImage className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/Vite.svg' alt='1' />
+              <LazyLoadImage className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/TailwindCSS.svg' alt='1' />
             </div>
             <div className='flex flex-col mobile:gap-2 md:text-3xl mobile:text-2xl text-xl pt-7.5'>
               <li>主にWebアプリ開発で使用</li>
@@ -181,14 +183,14 @@ const Home:FC = () => {
               BackEnd
             </h2>
             <div className='flex flex-wrap sm:gap-7 gap-3 mt-3'>
-              <img className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/Java.svg' alt='1' />
-              <img className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/Python.svg' alt='1' />
-              <img className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/C.svg' alt='1' />
-              <img className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/CPP.svg' alt='1' />
-              <img className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/Django.svg' alt='1' />
-              <img className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/Spring.svg' alt='1' />
-              <img className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/Gradle.svg' alt='1' />
-              <img className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/Mariadb.svg' alt='1' />
+              <LazyLoadImage className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/Java.svg' alt='1' />
+              <LazyLoadImage className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/Python.svg' alt='1' />
+              <LazyLoadImage className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/C.svg' alt='1' />
+              <LazyLoadImage className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/CPP.svg' alt='1' />
+              <LazyLoadImage className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/Django.svg' alt='1' />
+              <LazyLoadImage className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/Spring.svg' alt='1' />
+              <LazyLoadImage className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/Gradle.svg' alt='1' />
+              <LazyLoadImage className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/Mariadb.svg' alt='1' />
             </div>
             <div className='flex flex-col mobile:gap-2 md:text-3xl mobile:text-2xl text-xl pt-7.5'>
               <li>Python, Cは研究で使用</li>
@@ -202,13 +204,13 @@ const Home:FC = () => {
               Tools
             </h2>
             <div className='flex flex-wrap sm:gap-7 gap-3 mt-3'>
-              <img className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/VSCode.svg' alt='1' />
-              <img className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/Github.svg' alt='1' />
-              <img className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/Docker.svg' alt='1' />
-              <img className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/Figma.svg' alt='1' />
-              <img className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/Linux.svg' alt='1' />
-              <img className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/Eclipse.svg' alt='1' />
-              <img className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/Vercel.svg' alt='1' />
+              <LazyLoadImage className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/VSCode.svg' alt='1' />
+              <LazyLoadImage className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/Github.svg' alt='1' />
+              <LazyLoadImage className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/Docker.svg' alt='1' />
+              <LazyLoadImage className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/Figma.svg' alt='1' />
+              <LazyLoadImage className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/Linux.svg' alt='1' />
+              <LazyLoadImage className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/Eclipse.svg' alt='1' />
+              <LazyLoadImage className='sm:h-20 h-15 sm:w-20 w-15' src='/icons/Vercel.svg' alt='1' />
             </div>
             <div className='flex flex-col mobile:gap-2 md:text-3xl mobile:text-2xl text-xl pt-7.5'>
               <li>VSCodeが一番使うエディタ</li>
