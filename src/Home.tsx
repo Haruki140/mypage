@@ -9,6 +9,8 @@ import Footer from './Footer';
 
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
+import { Analytics } from '@vercel/analytics/react';
+
 
 const Home:FC = () => {
   const [isShowFinish, setIsShowFinish] = useState(false);
@@ -298,6 +300,7 @@ const Home:FC = () => {
         ): (<></>)}
       </div>
       <Footer />
+      <Analytics />
     </>
   )
 }
