@@ -1,5 +1,5 @@
 // ルーティングコンポーネント
-import { Route, Routes, BrowserRouter } from "react-router-dom";
+import { Route, Routes, BrowserRouter } from "react-router";
 import Home from "./Home";
 import Detail from "./Detail";
 import { FC } from "react";

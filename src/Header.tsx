@@ -1,5 +1,5 @@
 import {useState, useEffect, FC} from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router";
 import './style.css'
 import { Elements, pairElements } from "type";
 
