@@ -3,7 +3,7 @@ import Slider from './Slider';
 
 import photos from "./assets/favPhotoData.json";
 import works from "./assets/workData.json";
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router';
 import Header from './Header';
 import Footer from './Footer';
 
